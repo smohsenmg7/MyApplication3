@@ -48,6 +48,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 Intent intent = new Intent();
+                intent.putExtra("message","this is ok baby");
                 setResult(RESULT_OK, intent);
                 finish();
                 return false;
