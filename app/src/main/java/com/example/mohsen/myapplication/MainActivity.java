@@ -52,7 +52,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_COD && resultCode == RESULT_OK) {
-            Toast.makeText(this, "Confirmed", Toast.LENGTH_SHORT).show();
+            String note=data.getStringExtra("message");
+            Toast.makeText(this, note, Toast.LENGTH_SHORT).show();
+
 
         }
     }

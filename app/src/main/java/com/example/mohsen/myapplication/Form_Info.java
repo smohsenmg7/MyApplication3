@@ -82,23 +82,28 @@ public class Form_Info implements CompoundButton.OnCheckedChangeListener, View.O
     public boolean isValidInput(String name, String phone, String email) {
         boolean check = true;
         if (name == null) {
-            name = inputName.getText().toString();
+            name = inputName.getText().toString().trim();
         }
         if (phone == null) {
-            phone = inputPhone.getText().toString();
+            phone = inputPhone.getText().toString().trim();
         }
         if (email == null) {
-            email = inputEmail.getText().toString();
+            email=inputEmail.getText().toString().trim();
         }
         if (name.length() < 3) {
             Toast.makeText(activity, "name is under three Ch", Toast.LENGTH_SHORT).show();
             inputName.requestFocus();
             check = false;
-        } else if ((!phone.isEmpty() && phone.length() != 11) || !phone.startsWith("09")) {
-            Toast.makeText(activity, "phone must be 11 Ch", Toast.LENGTH_SHORT).show();
-            inputPhone.requestFocus();
-            check = false;
-        } else if (email.lastIndexOf("@") <= 0 || !email.contains(".") || email.startsWith("@")
+        }
+        if (checkBox.isChecked()){
+            if ((!phone.isEmpty() && phone.length() != 11) || (!phone.startsWith("09"))) {
+                Toast.makeText(activity, "phone must be 11 Ch", Toast.LENGTH_SHORT).show();
+                inputPhone.requestFocus();
+                check = false;
+            }
+
+        }
+        if (email.lastIndexOf("") <= 0 || !email.contains(".") || email.startsWith("@")
                 || email.lastIndexOf(".") < email.lastIndexOf("@")) {
             Toast.makeText(activity, "wrong email format", Toast.LENGTH_SHORT).show();
             inputEmail.requestFocus();
