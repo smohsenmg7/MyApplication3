@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    android:orientation="horizontal"
+    android:rowCount="3">
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:background="#837b7b" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:background="#ff0000" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:background="#0037ff" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:background="#62ff00" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:background="#dda505ae" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:background="#ffaa00" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:background="#f644ffef" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:background="#ffaa00" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_column="2"
+        android:layout_columnWeight="1"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:background="#2f0074" />
+
+</GridLayout>

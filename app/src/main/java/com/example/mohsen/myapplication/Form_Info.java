@@ -88,14 +88,14 @@ public class Form_Info implements CompoundButton.OnCheckedChangeListener, View.O
             phone = inputPhone.getText().toString().trim();
         }
         if (email == null) {
-            email=inputEmail.getText().toString().trim();
+            email = inputEmail.getText().toString().trim();
         }
         if (name.length() < 3) {
             Toast.makeText(activity, "name is under three Ch", Toast.LENGTH_SHORT).show();
             inputName.requestFocus();
             check = false;
         }
-        if (checkBox.isChecked()){
+        if (checkBox.isChecked()) {
             if ((!phone.isEmpty() && phone.length() != 11) || (!phone.startsWith("09"))) {
                 Toast.makeText(activity, "phone must be 11 Ch", Toast.LENGTH_SHORT).show();
                 inputPhone.requestFocus();

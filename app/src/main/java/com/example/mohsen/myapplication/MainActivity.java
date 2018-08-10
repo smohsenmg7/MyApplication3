@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,16 +30,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String name = form.getInputName().getText().toString();
-                String phone=form.getInputPhone().getText().toString();
-                String email=form.getInputEmail().getText().toString();
+                String phone = form.getInputPhone().getText().toString();
+                String email = form.getInputEmail().getText().toString();
                 if (form.isValidInput(null, null, null)) {
 
                     Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                     intent.putExtra("name", name);
                     if (form.getCheckBox().isChecked()) {
-                        intent.putExtra("phone",phone );
+                        intent.putExtra("phone", phone);
                     }
-                    intent.putExtra("email",email );
+                    intent.putExtra("email", email);
                     startActivityForResult(intent, REQ_COD);
 
                 }
@@ -62,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         menu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                Intent intent=new Intent(Intent.ACTION_VIEW);
+                Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("sms:09167045504"));
                 startActivity(intent);
                 return false;
