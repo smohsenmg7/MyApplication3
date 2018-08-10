@@ -47,9 +47,7 @@ public class SecondActivity extends AppCompatActivity {
         menuItem1.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                Intent intent = new Intent();
-                intent.putExtra("message", "this is ok baby");
-                setResult(RESULT_OK, intent);
+                setResult(RESULT_OK);
                 finish();
                 return false;
             }

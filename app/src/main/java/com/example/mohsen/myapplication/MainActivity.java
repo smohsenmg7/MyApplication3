@@ -1,6 +1,7 @@
 package com.example.mohsen.myapplication;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -52,28 +53,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQ_COD && resultCode == RESULT_OK) {
-            String note=data.getStringExtra("message");
-            Toast.makeText(this, note, Toast.LENGTH_SHORT).show();
-
-
+            Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-        menu.add("item1");
-        SubMenu subMenu3 = menu.addSubMenu("subMenu");
-        MenuItem item2 = subMenu3.add("subItem2");
-        item2.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("sms:09167045504"));
                 startActivity(intent);
                 return false;
             }
         });
-        item2.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         return super.onCreateOptionsMenu(menu);
     }
 }
