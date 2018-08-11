@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -58,12 +59,30 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        SubMenu intentSubMenu = menu.addSubMenu("intent");
+        intentSubMenu.add("open browser").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("sms:09167045504"));
                 startActivity(intent);
+                return false;
+            }
+        });
+
+        SubMenu media = menu.addSubMenu("media");
+        media.add("image view").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, Image_View_Activity.class));
+                return false;
+            }
+        });
+        SubMenu game = menu.addSubMenu("game");
+        game.add("game").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, Connect3.class));
                 return false;
             }
         });
