@@ -15,7 +15,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public static int REQ_COD = 3000;
     TextView textView;
-
     Button button;
 
     @Override
@@ -24,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Form_Info form = new Form_Info(this, R.id.layout_form_info);
-
 
         form.getButton().setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,13 +40,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     intent.putExtra("email", email);
                     startActivityForResult(intent, REQ_COD);
-
                 }
             }
         });
-
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -83,6 +78,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, Connect3.class));
+                return false;
+            }
+        });
+        media.add("VideoView").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, VideoViewActivity.class));
+                return false;
+            }
+        });
+        media.add("audio").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, AudioActivity.class));
+                return false;
+            }
+        });
+        SubMenu calculator = menu.addSubMenu("calculator");
+        calculator.add("calculator").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, CalculatorActivity.class));
+                return false;
+            }
+        });
+        menu.add("Dialog").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, DialogActivity.class));
                 return false;
             }
         });

@@ -18,7 +18,11 @@
         </activity>
         <activity android:name=".SecondActivity" />
         <activity android:name=".Image_View_Activity" />
-        <activity android:name=".Connect3"></activity>
+        <activity android:name=".Connect3" />
+        <activity android:name=".VideoViewActivity" />
+        <activity android:name=".AudioActivity" />
+        <activity android:name=".CalculatorActivity" />
+        <activity android:name=".DialogActivity"></activity>
     </application>
 
 </manifest>
