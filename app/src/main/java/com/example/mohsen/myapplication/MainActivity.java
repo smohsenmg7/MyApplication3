@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String name = form.getInputName().getText().toString();
+                String name = form.getInputName().getText(). toString();
                 String phone = form.getInputPhone().getText().toString();
                 String email = form.getInputEmail().getText().toString();
                 if (form.isValidInput(null, null, null)) {
