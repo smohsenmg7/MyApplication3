@@ -22,7 +22,9 @@
         <activity android:name=".VideoViewActivity" />
         <activity android:name=".AudioActivity" />
         <activity android:name=".CalculatorActivity" />
-        <activity android:name=".DialogActivity"></activity>
+        <activity android:name=".DialogActivity" />
+        <activity android:name=".SimpleListActivity" />
+        <activity android:name=".CustomListActivity"></activity>
     </application>
 
 </manifest>

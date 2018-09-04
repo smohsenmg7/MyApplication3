@@ -64,39 +64,35 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-        SubMenu media = menu.addSubMenu("media");
-        media.add("image view").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.add("image view").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, Image_View_Activity.class));
                 return false;
             }
         });
-        SubMenu game = menu.addSubMenu("game");
-        game.add("game").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.add("XO game").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, Connect3.class));
                 return false;
             }
         });
-        media.add("VideoView").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.add("VideoView").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, VideoViewActivity.class));
                 return false;
             }
         });
-        media.add("audio").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.add("audio").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, AudioActivity.class));
                 return false;
             }
         });
-        SubMenu calculator = menu.addSubMenu("calculator");
-        calculator.add("calculator").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        menu.add("calculator").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, CalculatorActivity.class));
@@ -107,6 +103,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 startActivity(new Intent(MainActivity.this, DialogActivity.class));
+                return false;
+            }
+        });
+        menu.add("List ").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, SimpleListActivity.class));
+                return false;
+            }
+        });
+        menu.add("Custom list Activity").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                startActivity(new Intent(MainActivity.this, CustomListActivity.class));
                 return false;
             }
         });
